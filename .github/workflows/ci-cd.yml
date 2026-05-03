@@ -1,50 +1,37 @@
-name: CI/CD Pipeline
+name: Deploy to GitHub Pages
 
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
-  test:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
-
-    - name: Check HTML syntax
-      run: |
-        find . -name "*.html" -type f -exec grep -q '<!DOCTYPE html>' {} \; || echo "Some HTML files might be missing DOCTYPE"
-
-    - name: Check CSS syntax
-      run: |
-        find . -name "*.css" -type f -exec echo "Checking CSS file: {}" \;
-
-    - name: Check JavaScript syntax
-      run: |
-        find . -name "*.js" -type f -exec echo "Checking JS file: {}" \;
-
-    - name: Verify file structure
-      run: |
-        echo "Checking required files..."
-        [ -f "index.html" ] && echo "✓ index.html exists" || echo "✗ index.html missing"
-        [ -d "css" ] && echo "✓ css directory exists" || echo "✗ css directory missing"
-        [ -d "js" ] && echo "✓ js directory exists" || echo "✗ js directory missing"
-        [ -d "images" ] && echo "✓ images directory exists" || echo "✗ images directory missing"
-
   deploy:
-    needs: test
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v4
 
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: .
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
