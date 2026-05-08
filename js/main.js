@@ -85,6 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.querySelector('.hamburger');
     const mobileMenu = document.querySelector('.mobile-menu');
     const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+    const mobileMenuClose = document.querySelector('.mobile-menu-close');
 
     if (hamburger && mobileMenu) {
         hamburger.addEventListener('click', function() {
@@ -92,6 +93,15 @@ document.addEventListener('DOMContentLoaded', function() {
             mobileMenu.classList.toggle('open');
             document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
         });
+
+        // Close menu when clicking close button
+        if (mobileMenuClose) {
+            mobileMenuClose.addEventListener('click', function() {
+                hamburger.classList.remove('open');
+                mobileMenu.classList.remove('open');
+                document.body.style.overflow = '';
+            });
+        }
 
         // Close menu when clicking a link
         mobileNavLinks.forEach(link => {
@@ -103,8 +113,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         // Close menu when clicking outside
-        mobileMenu.addEventListener('click', function(e) {
-            if (e.target === mobileMenu) {
+        document.addEventListener('click', function(e) {
+            if (mobileMenu.classList.contains('open') &&
+                !mobileMenu.contains(e.target) &&
+                !hamburger.contains(e.target)) {
                 hamburger.classList.remove('open');
                 mobileMenu.classList.remove('open');
                 document.body.style.overflow = '';

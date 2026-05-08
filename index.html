@@ -49,11 +49,31 @@
 
     <!-- Mobile Menu -->
     <div class="mobile-menu">
-        <a href="index.html" class="mobile-nav-link">Home</a>
-        <a href="pages/about.html" class="mobile-nav-link">About</a>
-        <a href="pages/programs.html" class="mobile-nav-link">Programs</a>
-        <a href="pages/why-sewasew.html" class="mobile-nav-link">Why SewaSew</a>
-        <a href="pages/contact.html" class="mobile-nav-link">Contact</a>
+        <div class="mobile-menu-header">
+            <div class="mobile-menu-brand">
+                <img src="images/logo-header.png" alt="SewaSew Academy">
+            </div>
+            <button class="mobile-menu-close" aria-label="Close menu">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M18 6L6 18M6 6l12 12"/>
+                </svg>
+            </button>
+        </div>
+        <div class="mobile-menu-content">
+            <a href="index.html" class="mobile-nav-link">Home</a>
+            <a href="pages/about.html" class="mobile-nav-link">About</a>
+            <a href="pages/programs.html" class="mobile-nav-link">Programs</a>
+            <a href="pages/why-sewasew.html" class="mobile-nav-link">Why SewaSew</a>
+            <a href="pages/contact.html" class="mobile-nav-link">Contact</a>
+        </div>
+        <div class="mobile-menu-footer">
+            <a href="pages/contact.html" class="mobile-menu-cta">
+                Get Started
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </a>
+        </div>
     </div>
 
     <!-- Hero Section -->
@@ -64,20 +84,20 @@
             <div class="orb orb-3"></div>
             <div class="grid-lines"></div>
         </div>
-        <div class="hero-content" data-animate>
+        <div class="hero-content">
             <div class="hero-badge">
                 <span class="badge-dot"></span>
                Premium English Institution — Addis Ababa
             </div>
-            <h1 class="hero-title">
+            <h1 class="hero-title" data-animate>
                 <span class="line">Structured English</span>
                 <span class="line">for Real</span>
                 <span class="line gradient-text">Communication</span>
             </h1>
-            <p class="hero-sub">
+            <p class="hero-sub" data-animate>
                 A premium English institution in Addis Ababa that develops confident communicators through structured, CEFR-aligned, outcome-driven learning.
             </p>
-            <div class="hero-actions">
+            <div class="hero-actions" data-animate>
                 <a href="https://t.me/sewasewacademy" target="_blank" rel="noopener" class="btn-primary">
                     Start Learning
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -86,7 +106,7 @@
                 </a>
                 <a href="pages/programs.html" class="btn-ghost">Explore Programs</a>
             </div>
-            <div class="hero-stats">
+            <div class="hero-stats" data-animate>
                 <div class="stat">
                     <span class="stat-num">500+</span>
                     <span class="stat-label">Students Trained</span>
