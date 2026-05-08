@@ -7,207 +7,420 @@
     <title>SewaSew Academy | Professional English Communication Training</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-brand">
-                <a href="index.html">
-                    <img src="images/logo.png" alt="SewaSew Academy" class="logo-image">
+    <!-- Noise Texture -->
+    <div class="noise"></div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-inner">
+            <a href="index.html" class="logo">
+                <img src="images/logo.png" alt="SewaSew Academy" class="logo-image">
+            </a>
+            <nav class="nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="pages/about.html" class="nav-link">About</a>
+                <a href="pages/programs.html" class="nav-link">Programs</a>
+                <a href="pages/why-sewasew.html" class="nav-link">Why SewaSew</a>
+            </nav>
+            <div class="header-actions">
+                <a href="pages/contact.html" class="btn-pill">
+                    Contact Us
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
                 </a>
+                <button class="hamburger" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
-            <button class="nav-toggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu">
-                <li><a href="index.html" class="active">Home</a></li>
-                <li><a href="pages/about.html">About</a></li>
-                <li><a href="pages/programs.html">Programs</a></li>
-                <li><a href="pages/why-sewasew.html">Why SewaSew</a></li>
-                <li><a href="pages/contact.html" class="cta-button">Contact Us</a></li>
-            </ul>
         </div>
-    </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <a href="index.html" class="mobile-nav-link">Home</a>
+        <a href="pages/about.html" class="mobile-nav-link">About</a>
+        <a href="pages/programs.html" class="mobile-nav-link">Programs</a>
+        <a href="pages/why-sewasew.html" class="mobile-nav-link">Why SewaSew</a>
+        <a href="pages/contact.html" class="mobile-nav-link">Contact</a>
+    </div>
 
     <!-- Hero Section -->
     <section class="hero">
+        <div class="hero-bg">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+            <div class="orb orb-3"></div>
+            <div class="grid-lines"></div>
+        </div>
+        <div class="hero-content" data-animate>
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Now Enrolling for 2024
+            </div>
+            <h1 class="hero-title">
+                <span class="line">Structured English</span>
+                <span class="line">for Real</span>
+                <span class="line gradient-text">Communication</span>
+            </h1>
+            <p class="hero-sub">
+                A premium English institution in Addis Ababa that develops confident communicators through structured, CEFR-aligned, outcome-driven learning.
+            </p>
+            <div class="hero-actions">
+                <a href="https://t.me/sewasewacademy" target="_blank" rel="noopener" class="btn-primary">
+                    Start Learning
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+                <a href="pages/programs.html" class="btn-ghost">Explore Programs</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-num">500+</span>
+                    <span class="stat-label">Students Trained</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-num">4.9</span>
+                    <span class="stat-label">Average Rating</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-num">95%</span>
+                    <span class="stat-label">Success Rate</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- Marquee -->
+    <div class="marquee-wrap">
+        <div class="marquee-track">
+            <span>Professional Communication</span>
+            <span class="dot">•</span>
+            <span>Business English</span>
+            <span class="dot">•</span>
+            <span>IELTS Preparation</span>
+            <span class="dot">•</span>
+            <span>Academic English</span>
+            <span class="dot">•</span>
+            <span>Interview Skills</span>
+            <span class="dot">•</span>
+            <span>Presentation Training</span>
+            <span class="dot">•</span>
+            <span>Professional Communication</span>
+            <span class="dot">•</span>
+            <span>Business English</span>
+            <span class="dot">•</span>
+            <span>IELTS Preparation</span>
+            <span class="dot">•</span>
+            <span>Academic English</span>
+            <span class="dot">•</span>
+            <span>Interview Skills</span>
+            <span class="dot">•</span>
+            <span>Presentation Training</span>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="section about-section">
         <div class="container">
-            <div class="hero-content">
-                <h1>Master English Communication with Confidence</h1>
-                <p>Premium English training for professionals, migrants, and business owners in Addis Ababa. Build real skills, gain real confidence.</p>
-                <div class="hero-cta">
-                    <a href="https://t.me/sewasew" target="_blank" rel="noopener" class="cta-primary">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18 1.897-.962 6.502-1.359 8.627-.168.9-.5 1.201-.82 1.23-.697.064-1.226-.461-1.901-.903-1.056-.692-1.653-1.123-2.678-1.799-1.185-.781-.417-1.21.258-1.911.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.139-5.062 3.345-.479.329-.913.489-1.302.481-.428-.009-1.252-.242-1.865-.442-.751-.244-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.831-2.529 6.998-3.015 3.333-1.386 4.025-1.627 4.477-1.635.099-.002.321.023.465.141.121.1.154.234.169.337.015.103.034.336.019.518z"/>
-                        </svg>
-                        Contact on Telegram
-                    </a>
-                    <a href="pages/programs.html" class="cta-secondary">View Programs</a>
+            <div class="about-grid">
+                <div class="about-visual" data-animate>
+                    <div class="about-card-stack">
+                        <div class="a-card a-card-back">
+                            <span class="a-card-label">Founded</span>
+                            <span class="a-card-val">2020</span>
+                        </div>
+                        <div class="a-card a-card-mid">
+                            <span class="a-card-label">Students</span>
+                            <span class="a-card-val">500+</span>
+                        </div>
+                        <div class="a-card a-card-front">
+                            <span class="a-card-icon">🎯</span>
+                            <p>Structured English for real communication mastery</p>
+                            <span class="a-card-tag">Excellence</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-text" data-animate>
+                    <div class="section-eyebrow">About SewaSew</div>
+                    <h2 class="section-title">Building Confident Communicators</h2>
+                    <p class="body-text">
+                        SewaSew Academy is a premium English institution in Addis Ababa, dedicated to developing confident communicators through structured, CEFR-aligned, outcome-driven learning.
+                    </p>
+                    <p class="body-text">
+                        We serve <em>professionals</em>, <em>business owners</em>, and <em>migration-focused learners</em> with a system designed for measurable progress and real-life application.
+                    </p>
+                    <div class="about-pillars">
+                        <span class="mini-pill">CEFR-Aligned</span>
+                        <span class="mini-pill">Practical Focus</span>
+                        <span class="mini-pill">Small Classes</span>
+                        <span class="mini-pill">Expert Instructors</span>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Trust Indicators -->
-    <section class="trust-indicators">
+    <!-- Programs Section -->
+    <section class="section programs-section">
         <div class="container">
-            <div class="trust-grid">
-                <div class="trust-item">
-                    <div class="trust-number">500+</div>
-                    <div class="trust-label">Professionals Trained</div>
+            <div class="section-header" data-animate>
+                <div class="section-eyebrow">Our Programs</div>
+                <h2 class="section-title">Structured Learning Paths</h2>
+                <p class="section-sub">Choose from our comprehensive programs designed for different goals and proficiency levels.</p>
+            </div>
+            <div class="programs-grid" data-animate>
+                <div class="prog-card prog-card-featured">
+                    <div class="prog-hover-bar"></div>
+                    <span class="prog-num">01</span>
+                    <div class="prog-icon">📚</div>
+                    <h3>General & Spoken English</h3>
+                    <p>Build foundation and develop real speaking fluency for daily and professional communication.</p>
+                    <div class="prog-tags">
+                        <span>8 Weeks</span>
+                        <span>Beginner-Intermediate</span>
+                    </div>
                 </div>
-                <div class="trust-item">
-                    <div class="trust-number">4.9★</div>
-                    <div class="trust-label">Student Satisfaction</div>
+                <div class="prog-card">
+                    <div class="prog-hover-bar"></div>
+                    <span class="prog-num">02</span>
+                    <div class="prog-icon">💼</div>
+                    <h3>Business & Professional English</h3>
+                    <p>Develop workplace communication, presentation skills, and professional confidence.</p>
+                    <div class="prog-tags">
+                        <span>6 Weeks</span>
+                        <span>Intermediate-Advanced</span>
+                    </div>
                 </div>
-                <div class="trust-item">
-                    <div class="trust-number">5+</div>
-                    <div class="trust-label">Years Experience</div>
+                <div class="prog-card">
+                    <div class="prog-hover-bar"></div>
+                    <span class="prog-num">03</span>
+                    <div class="prog-icon">🎓</div>
+                    <h3>Exam & Academic Programs</h3>
+                    <p>Prepare for IELTS, TOEFL, and academic success with structured training.</p>
+                    <div class="prog-tags">
+                        <span>12 Weeks</span>
+                        <span>All Levels</span>
+                    </div>
                 </div>
-                <div class="trust-item">
-                    <div class="trust-number">100%</div>
-                    <div class="trust-label">Practical Focus</div>
+            </div>
+            <div class="formats-strip" data-animate>
+                <span class="formats-label">Learning Formats</span>
+                <div class="formats-items">
+                    <div class="format-item">
+                        <span class="format-icon">👥</span>
+                        <div>
+                            <strong>Small Groups</strong>
+                            <p>Max 10 students</p>
+                        </div>
+                    </div>
+                    <div class="format-item">
+                        <span class="format-icon">🎯</span>
+                        <div>
+                            <strong>1-on-1</strong>
+                            <p>Personalized coaching</p>
+                        </div>
+                    </div>
+                    <div class="format-item">
+                        <span class="format-icon">💻</span>
+                        <div>
+                            <strong>Online</strong>
+                            <p>Flexible learning</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Who We Help -->
-    <section class="who-we-help">
+    <!-- Why SewaSew Section -->
+    <section class="section why-section">
         <div class="container">
-            <div class="section-header">
-                <h2>Who We Help</h2>
-                <p>Designed for professionals who need real English skills for real opportunities</p>
+            <div class="why-layout">
+                <div class="why-text" data-animate>
+                    <div class="section-eyebrow">Why SewaSew</div>
+                    <h2 class="section-title">What Makes Us Different</h2>
+                    <p class="body-text">
+                        SewaSew Academy is a structured English institution built for learners who need real communication results — not theoretical learning.
+                    </p>
+                    <div class="big-statement">
+                        We don't teach English as theory. We develop English as a practical communication skill.
+                    </div>
+                    <div class="problem-cards">
+                        <div class="problem-card">
+                            <span class="x-mark">✕</span>
+                            No memorization-based teaching
+                        </div>
+                        <div class="problem-card">
+                            <span class="x-mark">✕</span>
+                            No generic curriculum
+                        </div>
+                        <div class="problem-card">
+                            <span class="x-mark">✕</span>
+                            No one-size-fits-all approach
+                        </div>
+                    </div>
+                </div>
+                <div class="pillar-cards" data-animate>
+                    <div class="pillar">
+                        <span class="pillar-num">01</span>
+                        <h4>Structured Learning System</h4>
+                        <p>Clear progression with measurable milestones and CEFR-aligned curriculum.</p>
+                    </div>
+                    <div class="pillar">
+                        <span class="pillar-num">02</span>
+                        <h4>Communication-Focused</h4>
+                        <p>Real-world application in every stage of learning, not just theory.</p>
+                    </div>
+                    <div class="pillar">
+                        <span class="pillar-num">03</span>
+                        <h4>Skilled Instructors</h4>
+                        <p>Trained in practical communication development with real-world experience.</p>
+                    </div>
+                    <div class="pillar">
+                        <span class="pillar-num">04</span>
+                        <h4>Measurable Progress</h4>
+                        <p>Track your improvement with clear assessments and feedback.</p>
+                    </div>
+                </div>
             </div>
-            <div class="audience-grid">
-                <div class="audience-card">
-                    <div class="audience-icon">💼</div>
-                    <h3>Professionals</h3>
-                    <p>Advance your career with confident communication in international business environments</p>
-                </div>
-                <div class="audience-card">
-                    <div class="audience-icon">✈️</div>
-                    <h3>Migrants & Diaspora</h3>
-                    <p>Prepare for international opportunities with practical language skills</p>
-                </div>
-                <div class="audience-card">
-                    <div class="audience-icon">🏢</div>
-                    <h3>Business Owners</h3>
-                    <p>Expand your reach and communicate effectively with global partners</p>
-                </div>
-                <div class="audience-card">
-                    <div class="audience-icon">📈</div>
-                    <h3>Low-Skill Workers</h3>
-                    <p>Build foundational skills to access better opportunities</p>
+            <div class="learners-section">
+                <h3 class="learners-title">Who We Help</h3>
+                <div class="learners-grid" data-animate>
+                    <div class="learner-card">
+                        <div class="learner-icon">👔</div>
+                        <h4>Professionals</h4>
+                        <p>Advance your career with better communication skills</p>
+                    </div>
+                    <div class="learner-card">
+                        <div class="learner-icon">✈️</div>
+                        <h4>Migrants</h4>
+                        <p>Prepare for life abroad with confidence</p>
+                    </div>
+                    <div class="learner-card">
+                        <div class="learner-icon">🏢</div>
+                        <h4>Business Owners</h4>
+                        <p>Improve your business communication</p>
+                    </div>
+                    <div class="learner-card">
+                        <div class="learner-icon">👷</div>
+                        <h4>Workers</h4>
+                        <p>Enhance your workplace communication</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Our Approach -->
-    <section class="approach">
-        <div class="container">
-            <div class="section-header">
-                <h2>Our Approach</h2>
-                <p>Not just teaching English — building confident communicators</p>
-            </div>
-            <div class="approach-steps">
-                <div class="step">
-                    <div class="step-number">1</div>
-                    <h3>Assess Your Level</h3>
-                    <p>Free consultation to understand your current skills and goals</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <h3>Personalized Plan</h3>
-                    <p>Tailored curriculum focused on your specific needs</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">3</div>
-                    <h3>Practical Training</h3>
-                    <p>Real-world scenarios, not just textbook exercises</p>
-                </div>
-                <div class="step">
-                    <div class="step-number">4</div>
-                    <h3>Ongoing Support</h3>
-                    <p>Continuous guidance even after course completion</p>
-                </div>
-            </div>
+    <!-- CTA Banner -->
+    <section class="cta-banner">
+        <div class="cta-banner-bg">
+            <div class="cta-orb"></div>
         </div>
-    </section>
-
-    <!-- Why Choose Us Preview -->
-    <section class="why-preview">
-        <div class="container">
-            <div class="why-content">
-                <h2>Why Professionals Choose SewaSew Academy</h2>
-                <ul class="why-list">
-                    <li>✓ Native-level instructors with real business experience</li>
-                    <li>✓ Small class sizes for personalized attention</li>
-                    <li>✓ Flexible schedules for working professionals</li>
-                    <li>✓ Proven methodology with measurable results</li>
-                    <li>✓ Supportive learning environment</li>
-                </ul>
-                <a href="pages/why-sewasew.html" class="cta-link">Learn More About Us →</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Ready to Transform Your English Skills?</h2>
-                <p>Start with a free consultation. No pressure, just honest guidance about your English learning journey.</p>
-                <div class="cta-buttons">
-                    <a href="https://t.me/sewasew" target="_blank" rel="noopener" class="cta-primary">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18 1.897-.962 6.502-1.359 8.627-.168.9-.5 1.201-.82 1.23-.697.064-1.226-.461-1.901-.903-1.056-.692-1.653-1.123-2.678-1.799-1.185-.781-.417-1.21.258-1.911.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.139-5.062 3.345-.479.329-.913.489-1.302.481-.428-.009-1.252-.242-1.865-.442-.751-.244-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.831-2.529 6.998-3.015 3.333-1.386 4.025-1.627 4.477-1.635.099-.002.321.023.465.141.121.1.154.234.169.337.015.103.034.336.019.518z"/>
-                        </svg>
-                        Contact on Telegram
-                    </a>
-                    <a href="pages/contact.html" class="cta-secondary">Other Contact Options</a>
-                </div>
+        <div class="cta-content" data-animate>
+            <h2>Ready to Transform Your English?</h2>
+            <p>If you are serious about improving your English for career, business, or life abroad, we will guide you to the right program.</p>
+            <div class="cta-actions">
+                <a href="https://t.me/sewasewacademy" target="_blank" rel="noopener" class="btn-primary btn-large">
+                    Contact Us on Telegram
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18 1.897-.962 6.502-1.359 8.627-.168.9-.5 1.201-.82 1.23-.697.064-1.226-.461-1.901-.903-1.056-.692-1.653-1.123-2.678-1.799-1.185-.781-.417-1.21.258-1.911.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.139-5.062 3.345-.479.329-.913.489-1.302.481-.428-.009-1.252-.242-1.865-.442-.751-.244-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.831-2.529 6.998-3.015 3.333-1.386 4.025-1.627 4.477-1.635.099-.002.321.023.465.141.121.1.154.234.169.337.015.103.034.336.019.518z"/>
+                    </svg>
+                </a>
+                <a href="https://wa.me/251923052061" target="_blank" rel="noopener" class="btn-ghost btn-large">
+                    WhatsApp
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <img src="images/logo.png" alt="SewaSew Academy" class="footer-logo">
-                    <p>Premium English Communication Training</p>
-                    <p>Addis Ababa, Ethiopia</p>
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo footer-logo">
+                        <img src="images/logo.png" alt="SewaSew Academy" class="footer-logo">
+                    </a>
+                    <p>Structured English for Real Communication Mastery. Premium English training in Addis Ababa, Ethiopia.</p>
+                    <div class="social-icons">
+                        <a href="https://t.me/sewasewacademy" target="_blank" rel="noopener" class="social-icon telegram" aria-label="Telegram">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18 1.897-.962 6.502-1.359 8.627-.168.9-.5 1.201-.82 1.23-.697.064-1.226-.461-1.901-.903-1.056-.692-1.653-1.123-2.678-1.799-1.185-.781-.417-1.21.258-1.911.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.139-5.062 3.345-.479.329-.913.489-1.302.481-.428-.009-1.252-.242-1.865-.442-.751-.244-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.831-2.529 6.998-3.015 3.333-1.386 4.025-1.627 4.477-1.635.099-.002.321.023.465.141.121.1.154.234.169.337.015.103.034.336.019.518z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.facebook.com/sewasewacademy" target="_blank" rel="noopener" class="social-icon facebook" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="http://www.instagram.com/sewasew.academy" target="_blank" rel="noopener" class="social-icon instagram" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.youtube.com/@sewasewacademy" target="_blank" rel="noopener" class="social-icon youtube" aria-label="YouTube">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.tiktok.com/@sewasewacademy" target="_blank" rel="noopener" class="social-icon tiktok" aria-label="TikTok">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 2.86-5.7 2.25-1.12-.31-2.13-.95-2.84-1.86-.75-.98-1.11-2.25-1.05-3.48.07-1.29.63-2.53 1.53-3.47.88-.93 2.09-1.42 3.32-1.19.03.96.01 1.93.02 2.9-.52-.16-1.09-.25-1.63-.13-.97.2-1.77 1.15-1.75 2.14.02.87.54 1.7 1.33 2.07.78.36 1.74.22 2.4-.38.67-.61.91-1.55.87-2.44-.03-2.96-.01-5.92-.02-8.88 0-.05.01-.1.02-.15z"/>
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/251923052061" target="_blank" rel="noopener" class="social-icon whatsapp" aria-label="WhatsApp">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="pages/about.html">About</a></li>
-                        <li><a href="pages/programs.html">Programs</a></li>
-                        <li><a href="pages/why-sewasew.html">Why SewaSew</a></li>
-                        <li><a href="pages/contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact</h4>
-                    <ul>
-                        <li><a href="https://t.me/sewasew" target="_blank" rel="noopener">Telegram</a></li>
-                        <li><a href="tel:+251911234567">+251 911 234 567</a></li>
-                        <li><a href="mailto:info@sewasewacademy.com">info@sewasewacademy.com</a></li>
-                    </ul>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h5>Quick Links</h5>
+                        <a href="index.html">Home</a>
+                        <a href="pages/about.html">About</a>
+                        <a href="pages/programs.html">Programs</a>
+                        <a href="pages/why-sewasew.html">Why SewaSew</a>
+                    </div>
+                    <div class="footer-col">
+                        <h5>Programs</h5>
+                        <a href="pages/programs.html">General English</a>
+                        <a href="pages/programs.html">Business English</a>
+                        <a href="pages/programs.html">Exam Preparation</a>
+                        <a href="pages/programs.html">Custom Training</a>
+                    </div>
+                    <div class="footer-col">
+                        <h5>Contact</h5>
+                        <a href="https://t.me/sewasewacademy" target="_blank" rel="noopener">Telegram</a>
+                        <a href="https://wa.me/251923052061" target="_blank" rel="noopener">WhatsApp</a>
+                        <a href="tel:+251923052061">+251 923 052 061</a>
+                        <a href="mailto:sewasewacademy@gmail.com">Email Us</a>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 SewaSew Academy. All rights reserved.</p>
+                <span>&copy; 2024 SewaSew Academy. All rights reserved.</span>
+                <span>Addis Ababa, Ethiopia</span>
             </div>
         </div>
     </footer>

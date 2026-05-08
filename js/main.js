@@ -1,78 +1,120 @@
-// ===================================
+// =============================================
 // SEWASEW ACADEMY - MAIN.JS
-// Interactive Functionality
-// ===================================
+// Custom Cursor, Scroll Animations, Mobile Menu
+// =============================================
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Mobile Navigation Toggle
-    const navToggle = document.querySelector('.nav-toggle');
-    const navMenu = document.querySelector('.nav-menu');
+    // Custom Cursor
+    const cursor = document.querySelector('.cursor');
+    const cursorFollower = document.querySelector('.cursor-follower');
 
-    if (navToggle && navMenu) {
-        navToggle.addEventListener('click', function() {
-            navMenu.classList.toggle('active');
-            this.classList.toggle('active');
+    // Detect touch device
+    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+    if (cursor && cursorFollower && !isTouchDevice && window.innerWidth > 768) {
+        let mouseX = 0, mouseY = 0;
+        let followerX = 0, followerY = 0;
+
+        document.addEventListener('mousemove', function(e) {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+
+            // Immediate update for main cursor
+            cursor.style.left = mouseX + 'px';
+            cursor.style.top = mouseY + 'px';
         });
 
-        // Close menu when clicking on a link
-        const navLinks = navMenu.querySelectorAll('a');
-        navLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                navMenu.classList.remove('active');
-                navToggle.classList.remove('active');
+        // Smooth follower animation
+        function animateCursor() {
+            followerX += (mouseX - followerX) * 0.15;
+            followerY += (mouseY - followerY) * 0.15;
+
+            cursorFollower.style.left = followerX + 'px';
+            cursorFollower.style.top = followerY + 'px';
+
+            requestAnimationFrame(animateCursor);
+        }
+        animateCursor();
+
+        // Hover effects
+        const hoverElements = document.querySelectorAll('a, button, .prog-card, .pillar, .learner-card, .format-item, .social-icon, input, textarea');
+        hoverElements.forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                cursor.classList.add('hover');
+                cursorFollower.classList.add('hover');
+            });
+            el.addEventListener('mouseleave', () => {
+                cursor.classList.remove('hover');
+                cursorFollower.classList.remove('hover');
             });
         });
 
-        // Close menu when clicking outside
-        document.addEventListener('click', function(event) {
-            const isClickInsideNav = navMenu.contains(event.target);
-            const isClickOnToggle = navToggle.contains(event.target);
-
-            if (!isClickInsideNav && !isClickOnToggle && navMenu.classList.contains('active')) {
-                navMenu.classList.remove('active');
-                navToggle.classList.remove('active');
-            }
+        // Hide cursor when leaving window
+        document.addEventListener('mouseleave', () => {
+            cursor.style.opacity = '0';
+            cursorFollower.style.opacity = '0';
         });
+
+        document.addEventListener('mouseenter', () => {
+            cursor.style.opacity = '1';
+            cursorFollower.style.opacity = '1';
+        });
+    } else if (cursor && cursorFollower) {
+        // Completely hide on mobile/touch devices
+        cursor.style.display = 'none';
+        cursorFollower.style.display = 'none';
     }
 
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            const href = this.getAttribute('href');
-            if (href !== '#') {
-                e.preventDefault();
-                const target = document.querySelector(href);
-                if (target) {
-                    const headerOffset = 70;
-                    const elementPosition = target.getBoundingClientRect().top;
-                    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
-                    window.scrollTo({
-                        top: offsetPosition,
-                        behavior: 'smooth'
-                    });
-                }
-            }
-        });
-    });
-
-    // Add scroll effect to navbar
-    const navbar = document.querySelector('.navbar');
+    // Header Scroll Effect
+    const header = document.querySelector('header');
     let lastScroll = 0;
 
     window.addEventListener('scroll', function() {
         const currentScroll = window.pageYOffset;
 
-        if (currentScroll <= 0) {
-            navbar.style.boxShadow = '0 1px 2px 0 rgba(0, 0, 0, 0.05)';
+        if (currentScroll > 50) {
+            header.classList.add('scrolled');
         } else {
-            navbar.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1)';
+            header.classList.remove('scrolled');
         }
 
         lastScroll = currentScroll;
     });
 
-    // Add fade-in animation on scroll
+    // Mobile Menu Toggle
+    const hamburger = document.querySelector('.hamburger');
+    const mobileMenu = document.querySelector('.mobile-menu');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+    if (hamburger && mobileMenu) {
+        hamburger.addEventListener('click', function() {
+            hamburger.classList.toggle('open');
+            mobileMenu.classList.toggle('open');
+            document.body.style.overflow = mobileMenu.classList.contains('open') ? 'hidden' : '';
+        });
+
+        // Close menu when clicking a link
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                hamburger.classList.remove('open');
+                mobileMenu.classList.remove('open');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // Close menu when clicking outside
+        mobileMenu.addEventListener('click', function(e) {
+            if (e.target === mobileMenu) {
+                hamburger.classList.remove('open');
+                mobileMenu.classList.remove('open');
+                document.body.style.overflow = '';
+            }
+        });
+    }
+
+    // Scroll Animations
+    const animatedElements = document.querySelectorAll('[data-animate]');
+
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
@@ -81,56 +123,146 @@ document.addEventListener('DOMContentLoaded', function() {
     const observer = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('fade-in');
-                observer.unobserve(entry.target);
+                entry.target.classList.add('visible');
             }
         });
     }, observerOptions);
 
-    // Observe all sections
-    document.querySelectorAll('section').forEach(section => {
-        observer.observe(section);
-    });
+    animatedElements.forEach(el => observer.observe(el));
 
-    // Add active state to navigation based on scroll position
-    const sections = document.querySelectorAll('section[id]');
-    const navLinks = document.querySelectorAll('.nav-menu a[href^="#"]');
-
-    window.addEventListener('scroll', function() {
-        let current = '';
-        const scrollPosition = window.pageYOffset + 100;
-
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            const sectionId = section.getAttribute('id');
-
-            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-                current = sectionId;
-            }
-        });
-
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === `#${current}`) {
-                link.classList.add('active');
+    // Smooth Scroll for Anchor Links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
             }
         });
     });
 
-    // Add hover effects to cards
-    const cards = document.querySelectorAll('.audience-card, .trust-item');
-    cards.forEach(card => {
-        card.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-5px)';
-        });
+    // Form Handling (if contact form exists)
+    const contactForm = document.querySelector('.contact-form');
+    const formSuccess = document.querySelector('.form-success');
 
-        card.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0)';
+    if (contactForm && formSuccess) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Simulate form submission
+            const submitBtn = contactForm.querySelector('.btn-submit');
+            const originalText = submitBtn.innerHTML;
+
+            submitBtn.innerHTML = '<span class="btn-text">Sending...</span>';
+            submitBtn.disabled = true;
+
+            setTimeout(() => {
+                formSuccess.classList.add('show');
+                contactForm.reset();
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+
+                // Hide success message after 5 seconds
+                setTimeout(() => {
+                    formSuccess.classList.remove('show');
+                }, 5000);
+            }, 1500);
         });
+    }
+
+    // Active Nav Link
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    navLinks.forEach(link => {
+        const linkPath = new URL(link.href).pathname;
+        if (linkPath === currentPath || (currentPath === '/' && linkPath === '/index.html')) {
+            link.classList.add('active');
+        }
+    });
+
+    // Parallax Effect for Orbs
+    const orbs = document.querySelectorAll('.orb');
+    if (orbs.length > 0) {
+        window.addEventListener('mousemove', function(e) {
+            const x = (e.clientX / window.innerWidth - 0.5) * 20;
+            const y = (e.clientY / window.innerHeight - 0.5) * 20;
+
+            orbs.forEach((orb, index) => {
+                const speed = (index + 1) * 0.5;
+                orb.style.transform = `translate(${x * speed}px, ${y * speed}px)`;
+            });
+        });
+    }
+
+    // Stats Counter Animation
+    const stats = document.querySelectorAll('.stat-num');
+    const statsObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const target = entry.target;
+                const finalValue = target.textContent;
+                const isPercentage = finalValue.includes('%');
+                const isPlus = finalValue.includes('+');
+                const numericValue = parseFloat(finalValue.replace(/[^0-9.]/g, ''));
+
+                let current = 0;
+                const increment = numericValue / 50;
+                const duration = 1500;
+                const stepTime = duration / 50;
+
+                const counter = setInterval(() => {
+                    current += increment;
+                    if (current >= numericValue) {
+                        current = numericValue;
+                        clearInterval(counter);
+                    }
+                    let displayValue = current.toFixed(numericValue % 1 !== 0 ? 1 : 0);
+                    if (isPercentage) displayValue += '%';
+                    if (isPlus) displayValue += '+';
+                    target.textContent = displayValue;
+                }, stepTime);
+
+                statsObserver.unobserve(target);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    stats.forEach(stat => statsObserver.observe(stat));
+
+    // Resize Handler
+    let resizeTimer;
+    window.addEventListener('resize', function() {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+            // Show/hide custom cursor based on screen size and touch capability
+            if (cursor && cursorFollower) {
+                if (!isTouchDevice && window.innerWidth > 768) {
+                    cursor.style.display = '';
+                    cursorFollower.style.display = '';
+                } else {
+                    cursor.style.display = 'none';
+                    cursorFollower.style.display = 'none';
+                }
+            }
+        }, 250);
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', function(e) {
+        // ESC key closes mobile menu
+        if (e.key === 'Escape' && mobileMenu && mobileMenu.classList.contains('open')) {
+            hamburger.classList.remove('open');
+            mobileMenu.classList.remove('open');
+            document.body.style.overflow = '';
+        }
     });
 
     // Console message for developers
-    console.log('SewaSew Academy - Website loaded successfully');
-    console.log('Built with trust and professionalism in mind');
+    console.log('🎨 SewaSew Academy - Modern Dark Theme Loaded');
+    console.log('✨ Built with professional design and smooth interactions');
+    console.log('📱 Fully responsive and accessible');
 });

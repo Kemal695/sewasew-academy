@@ -7,274 +7,306 @@
     <title>Contact Us | SewaSew Academy</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="../favicon.svg">
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-brand">
-                <a href="../index.html">
-                    <img src="../images/logo.png" alt="SewaSew Academy" class="logo-image">
+    <!-- Noise Texture -->
+    <div class="noise"></div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-inner">
+            <a href="../index.html" class="logo">
+                <img src="../images/logo.png" alt="SewaSew Academy" class="logo-image">
+            </a>
+            <nav class="nav">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="programs.html" class="nav-link">Programs</a>
+                <a href="why-sewasew.html" class="nav-link">Why SewaSew</a>
+            </nav>
+            <div class="header-actions">
+                <a href="contact.html" class="btn-pill">
+                    Contact Us
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
                 </a>
+                <button class="hamburger" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
-            <button class="nav-toggle" aria-label="Toggle navigation">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-menu">
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="programs.html">Programs</a></li>
-                <li><a href="why-sewasew.html">Why SewaSew</a></li>
-                <li><a href="contact.html" class="cta-button">Contact Us</a></li>
-            </ul>
         </div>
-    </nav>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <a href="../index.html" class="mobile-nav-link">Home</a>
+        <a href="about.html" class="mobile-nav-link">About</a>
+        <a href="programs.html" class="mobile-nav-link">Programs</a>
+        <a href="why-sewasew.html" class="mobile-nav-link">Why SewaSew</a>
+        <a href="contact.html" class="mobile-nav-link">Contact</a>
+    </div>
 
     <!-- Page Header -->
-    <section class="page-header">
-        <div class="container">
-            <h1>Get in Touch</h1>
-            <p>Start your journey to confident English communication today</p>
+    <section class="hero" style="min-height: 60vh; padding: 120px 48px 80px;">
+        <div class="hero-bg">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+            <div class="grid-lines"></div>
         </div>
-    </section>
-
-    <!-- Primary CTA - Telegram -->
-    <section class="primary-contact">
-        <div class="container">
-            <div class="primary-contact-card">
-                <div class="contact-icon telegram">
-                    <svg width="48" height="48" viewBox="0 0 24 24" fill="currentColor">
+        <div class="hero-content" data-animate>
+            <div class="section-eyebrow">Contact Us</div>
+            <h1 class="hero-title">
+                <span class="line">Start Your English</span>
+                <span class="line">Learning</span>
+                <span class="line gradient-text">Journey</span>
+            </h1>
+            <p class="hero-sub">
+                Get guidance, understand your level, and find the right program for your goals.
+            </p>
+            <div class="hero-actions">
+                <a href="https://t.me/sewasewacademy" target="_blank" rel="noopener" class="btn-primary">
+                    Contact Us on Telegram
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18 1.897-.962 6.502-1.359 8.627-.168.9-.5 1.201-.82 1.23-.697.064-1.226-.461-1.901-.903-1.056-.692-1.653-1.123-2.678-1.799-1.185-.781-.417-1.21.258-1.911.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.139-5.062 3.345-.479.329-.913.489-1.302.481-.428-.009-1.252-.242-1.865-.442-.751-.244-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.831-2.529 6.998-3.015 3.333-1.386 4.025-1.627 4.477-1.635.099-.002.321.023.465.141.121.1.154.234.169.337.015.103.034.336.019.518z"/>
                     </svg>
-                </div>
-                <h2>Contact Us on Telegram</h2>
-                <p class="contact-subtitle">This is the fastest way to reach us and get started with your free consultation.</p>
-                <a href="https://t.me/sewasew" target="_blank" rel="noopener" class="cta-primary large">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18 1.897-.962 6.502-1.359 8.627-.168.9-.5 1.201-.82 1.23-.697.064-1.226-.461-1.901-.903-1.056-.692-1.653-1.123-2.678-1.799-1.185-.781-.417-1.21.258-1.911.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.139-5.062 3.345-.479.329-.913.489-1.302.481-.428-.009-1.252-.242-1.865-.442-.751-.244-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.831-2.529 6.998-3.015 3.333-1.386 4.025-1.627 4.477-1.635.099-.002.321.023.465.141.121.1.154.234.169.337.015.103.034.336.019.518z"/>
-                    </svg>
-                    Open Telegram Chat
                 </a>
-                <p class="contact-note">We typically respond within 1-2 hours during business hours</p>
+                <a href="https://wa.me/251923052061" target="_blank" rel="noopener" class="btn-ghost">
+                    WhatsApp
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Other Contact Options -->
-    <section class="other-contacts">
+    <!-- Contact Section -->
+    <section class="section contact-section">
         <div class="container">
-            <div class="section-header">
-                <h2>Other Ways to Reach Us</h2>
-                <p>Choose the contact method that works best for you</p>
-            </div>
             <div class="contact-grid">
-                <div class="contact-card">
-                    <div class="contact-icon whatsapp">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                        </svg>
+                <!-- Contact Info -->
+                <div class="contact-info" data-animate>
+                    <div class="info-block">
+                        <div class="info-icon">📍</div>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Addis Ababa, Ethiopia</p>
+                        </div>
                     </div>
-                    <h3>WhatsApp</h3>
-                    <p>Message us anytime</p>
-                    <a href="https://wa.me/251911234567" target="_blank" rel="noopener" class="contact-link">+251 911 234 567</a>
+                    <div class="info-block">
+                        <div class="info-icon">📞</div>
+                        <div>
+                            <h4>Phone</h4>
+                            <p>+251 923 052 061</p>
+                        </div>
+                    </div>
+                    <div class="info-block">
+                        <div class="info-icon">📧</div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>sewasewacademy@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="info-block">
+                        <div class="info-icon">⏰</div>
+                        <div>
+                            <h4>Hours</h4>
+                            <p>Mon - Sat: 9:00 AM - 6:00 PM</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-social">
+                        <p class="social-label">Follow Us</p>
+                        <div class="social-row">
+                            <a href="https://t.me/sewasewacademy" target="_blank" rel="noopener" class="social-icon">TG</a>
+                            <a href="https://wa.me/251923052061" target="_blank" rel="noopener" class="social-icon">WA</a>
+                            <a href="https://www.facebook.com/sewasewacademy" target="_blank" rel="noopener" class="social-icon">FB</a>
+                            <a href="http://www.instagram.com/sewasew.academy" target="_blank" rel="noopener" class="social-icon">IG</a>
+                            <a href="https://www.youtube.com/@sewasewacademy" target="_blank" rel="noopener" class="social-icon">YT</a>
+                            <a href="https://www.tiktok.com/@sewasewacademy" target="_blank" rel="noopener" class="social-icon">TK</a>
+                        </div>
+                    </div>
+
+                    <div class="contact-help-box">
+                        <h4>How We Help You</h4>
+                        <ul>
+                            <li>Choose the right program</li>
+                            <li>Understand your current level</li>
+                            <li>Get class schedule information</li>
+                            <li>Learn how our system works</li>
+                        </ul>
+                    </div>
                 </div>
 
-                <div class="contact-card">
-                    <div class="contact-icon phone">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-                        </svg>
+                <!-- Contact Form -->
+                <form class="contact-form" data-animate>
+                    <div class="section-eyebrow" style="margin-bottom: 1.5rem;">Send Us a Message</div>
+                    <h2 style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; color: var(--white); margin-bottom: 1.5rem;">Get in Touch</h2>
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="name">Full Name <span>*</span></label>
+                            <input type="text" id="name" name="name" placeholder="Your name" required>
+                        </div>
+                        <div class="form-field">
+                            <label for="email">Email <span>*</span></label>
+                            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+                        </div>
                     </div>
-                    <h3>Phone</h3>
-                    <p>Call during business hours</p>
-                    <a href="tel:+251911234567" class="contact-link">+251 911 234 567</a>
-                </div>
-
-                <div class="contact-card">
-                    <div class="contact-icon email">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                        </svg>
+                    <div class="form-row">
+                        <div class="form-field">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+251 9XX XXX XXX">
+                        </div>
+                        <div class="form-field">
+                            <label for="program">Interested Program</label>
+                            <select id="program" name="program">
+                                <option value="">Select a program</option>
+                                <option value="general">General English</option>
+                                <option value="spoken">Spoken English</option>
+                                <option value="business">Business English</option>
+                                <option value="written">Written English</option>
+                                <option value="exam">Exam Preparation</option>
+                                <option value="custom">Custom Training</option>
+                            </select>
+                        </div>
                     </div>
-                    <h3>Email</h3>
-                    <p>Send us a message</p>
-                    <a href="mailto:info@sewasewacademy.com" class="contact-link">info@sewasewacademy.com</a>
-                </div>
+                    <div class="form-field">
+                        <label for="message">Your Message <span>*</span></label>
+                        <textarea id="message" name="message" placeholder="Tell us about your goals and how we can help you..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">
+                        <span class="btn-text">Send Message</span>
+                        <span class="btn-arrow">→</span>
+                    </button>
+                    <div class="form-success">
+                        Thank you! Your message has been sent successfully. We'll get back to you soon.
+                    </div>
+                </form>
             </div>
         </div>
     </section>
 
-    <!-- Contact Form -->
-    <section class="contact-form-section">
+    <!-- Direct Contact Banner -->
+    <section class="section" style="background: var(--dark-2);">
         <div class="container">
-            <div class="section-header">
-                <h2>Send Us a Message</h2>
-                <p>Fill out the form below and we'll get back to you within 24 hours</p>
-            </div>
-            <form class="contact-form" id="contactForm">
-                <div class="form-group">
-                    <label for="name">Full Name *</label>
-                    <input type="text" id="name" name="name" required placeholder="Enter your full name">
-                </div>
-                <div class="form-group">
-                    <label for="email">Email Address *</label>
-                    <input type="email" id="email" name="email" required placeholder="Enter your email address">
-                </div>
-                <div class="form-group">
-                    <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number (optional)">
-                </div>
-                <div class="form-group">
-                    <label for="interest">I'm interested in *</label>
-                    <select id="interest" name="interest" required>
-                        <option value="">Select a program</option>
-                        <option value="professional-communication">Professional Communication</option>
-                        <option value="interview-preparation">Interview Preparation</option>
-                        <option value="foundation-english">Foundation English</option>
-                        <option value="advanced-fluency">Advanced Fluency</option>
-                        <option value="business-writing">Business Writing</option>
-                        <option value="corporate-training">Corporate Training</option>
-                        <option value="not-sure">Not sure - need consultation</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="message">Your Message *</label>
-                    <textarea id="message" name="message" rows="5" required placeholder="Tell us about your goals and any questions you have"></textarea>
-                </div>
-                <button type="submit" class="cta-primary">Send Message</button>
-            </form>
-        </div>
-    </section>
-
-    <!-- Location -->
-    <section class="location-section">
-        <div class="container">
-            <div class="location-content">
-                <h2>Visit Us</h2>
-                <div class="location-info">
-                    <div class="location-item">
-                        <h3>Address</h3>
-                        <p>Addis Ababa, Ethiopia</p>
-                        <p>(Exact location provided upon consultation)</p>
-                    </div>
-                    <div class="location-item">
-                        <h3>Business Hours</h3>
-                        <p>Monday - Friday: 8:00 AM - 6:00 PM</p>
-                        <p>Saturday: 9:00 AM - 2:00 PM</p>
-                        <p>Sunday: Closed</p>
-                    </div>
-                    <div class="location-item">
-                        <h3>Best Time to Contact</h3>
-                        <p>Morning: 9:00 AM - 12:00 PM</p>
-                        <p>Afternoon: 2:00 PM - 5:00 PM</p>
-                    </div>
-                </div>
+            <div class="direct-contact" data-animate>
+                <h3 style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 700; color: var(--white); margin-bottom: 1rem;">Need Immediate Help?</h3>
+                <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 1.5rem;">
+                    Contact us directly on Telegram for the fastest response.
+                </p>
+                <a href="https://t.me/sewasewacademy" target="_blank" rel="noopener" class="btn-primary btn-large">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18 1.897-.962 6.502-1.359 8.627-.168.9-.5 1.201-.82 1.23-.697.064-1.226-.461-1.901-.903-1.056-.692-1.653-1.123-2.678-1.799-1.185-.781-.417-1.21.258-1.911.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.139-5.062 3.345-.479.329-.913.489-1.302.481-.428-.009-1.252-.242-1.865-.442-.751-.244-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.831-2.529 6.998-3.015 3.333-1.386 4.025-1.627 4.477-1.635.099-.002.321.023.465.141.121.1.154.234.169.337.015.103.034.336.019.518z"/>
+                    </svg>
+                    Contact on Telegram
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- FAQ -->
-    <section class="faq-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Frequently Asked Questions</h2>
-                <p>Quick answers to common questions</p>
-            </div>
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <h3>How do I get started?</h3>
-                    <p>Simply contact us on Telegram or fill out the form above. We'll schedule a free consultation to assess your level and discuss your goals.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>How long are the programs?</h3>
-                    <p>Programs range from 4 to 12 weeks depending on the course. We also offer flexible scheduling options for working professionals.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>What's included in the free consultation?</h3>
-                    <p>We'll assess your current English level, discuss your goals, recommend the right program, and answer any questions you have.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Do you offer payment plans?</h3>
-                    <p>Yes, we offer flexible payment options. Details are discussed during your free consultation based on your chosen program.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>Can I join if I'm a beginner?</h3>
-                    <p>Absolutely! We have programs for all levels, from complete beginners to advanced learners looking to refine their skills.</p>
-                </div>
-                <div class="faq-item">
-                    <h3>What if I miss a class?</h3>
-                    <p>We offer makeup sessions and provide materials for missed classes. Our flexible scheduling helps accommodate busy professionals.</p>
-                </div>
-            </div>
+    <!-- CTA Banner -->
+    <section class="cta-banner">
+        <div class="cta-banner-bg">
+            <div class="cta-orb"></div>
         </div>
-    </section>
-
-    <!-- Final CTA -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Ready to Take the First Step?</h2>
-                <p>Contact us today for your free consultation. No pressure, no obligation — just honest guidance about your English learning journey.</p>
-                <div class="cta-buttons">
-                    <a href="https://t.me/sewasew" target="_blank" rel="noopener" class="cta-primary">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18 1.897-.962 6.502-1.359 8.627-.168.9-.5 1.201-.82 1.23-.697.064-1.226-.461-1.901-.903-1.056-.692-1.653-1.123-2.678-1.799-1.185-.781-.417-1.21.258-1.911.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.139-5.062 3.345-.479.329-.913.489-1.302.481-.428-.009-1.252-.242-1.865-.442-.751-.244-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.831-2.529 6.998-3.015 3.333-1.386 4.025-1.627 4.477-1.635.099-.002.321.023.465.141.121.1.154.234.169.337.015.103.034.336.019.518z"/>
-                        </svg>
-                        Contact on Telegram
-                    </a>
-                    <a href="programs.html" class="cta-secondary">View Programs</a>
-                </div>
+        <div class="cta-content" data-animate>
+            <h2>Ready to Begin?</h2>
+            <p>Start a conversation with our team and get clear guidance for your next step.</p>
+            <div class="cta-actions">
+                <a href="https://t.me/sewasewacademy" target="_blank" rel="noopener" class="btn-primary btn-large">
+                    Contact Us on Telegram
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18 1.897-.962 6.502-1.359 8.627-.168.9-.5 1.201-.82 1.23-.697.064-1.226-.461-1.901-.903-1.056-.692-1.653-1.123-2.678-1.799-1.185-.781-.417-1.21.258-1.911.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.139-5.062 3.345-.479.329-.913.489-1.302.481-.428-.009-1.252-.242-1.865-.442-.751-.244-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.831-2.529 6.998-3.015 3.333-1.386 4.025-1.627 4.477-1.635.099-.002.321.023.465.141.121.1.154.234.169.337.015.103.034.336.019.518z"/>
+                    </svg>
+                </a>
+                <a href="https://wa.me/251923052061" target="_blank" rel="noopener" class="btn-ghost btn-large">
+                    WhatsApp
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <img src="../images/logo.png" alt="SewaSew Academy" class="footer-logo">
-                    <p>Premium English Communication Training</p>
-                    <p>Addis Ababa, Ethiopia</p>
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="../index.html" class="logo footer-logo">
+                        <span class="logo-mark">S</span>
+                        <span class="logo-text">SEWASEW</span>
+                    </a>
+                    <p>Structured English for Real Communication Mastery. Premium English training in Addis Ababa, Ethiopia.</p>
+                    <div class="social-icons">
+                        <a href="https://t.me/sewasewacademy" target="_blank" rel="noopener" class="social-icon telegram" aria-label="Telegram">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18 1.897-.962 6.502-1.359 8.627-.168.9-.5 1.201-.82 1.23-.697.064-1.226-.461-1.901-.903-1.056-.692-1.653-1.123-2.678-1.799-1.185-.781-.417-1.21.258-1.911.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.139-5.062 3.345-.479.329-.913.489-1.302.481-.428-.009-1.252-.242-1.865-.442-.751-.244-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.831-2.529 6.998-3.015 3.333-1.386 4.025-1.627 4.477-1.635.099-.002.321.023.465.141.121.1.154.234.169.337.015.103.034.336.019.518z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.facebook.com/sewasewacademy" target="_blank" rel="noopener" class="social-icon facebook" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                        </a>
+                        <a href="http://www.instagram.com/sewasew.academy" target="_blank" rel="noopener" class="social-icon instagram" aria-label="Instagram">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.youtube.com/@sewasewacademy" target="_blank" rel="noopener" class="social-icon youtube" aria-label="YouTube">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                        </a>
+                        <a href="https://www.tiktok.com/@sewasewacademy" target="_blank" rel="noopener" class="social-icon tiktok" aria-label="TikTok">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 2.86-5.7 2.25-1.12-.31-2.13-.95-2.84-1.86-.75-.98-1.11-2.25-1.05-3.48.07-1.29.63-2.53 1.53-3.47.88-.93 2.09-1.42 3.32-1.19.03.96.01 1.93.02 2.9-.52-.16-1.09-.25-1.63-.13-.97.2-1.77 1.15-1.75 2.14.02.87.54 1.7 1.33 2.07.78.36 1.74.22 2.4-.38.67-.61.91-1.55.87-2.44-.03-2.96-.01-5.92-.02-8.88 0-.05.01-.1.02-.15z"/>
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/251923052061" target="_blank" rel="noopener" class="social-icon whatsapp" aria-label="WhatsApp">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="programs.html">Programs</a></li>
-                        <li><a href="why-sewasew.html">Why SewaSew</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Contact</h4>
-                    <ul>
-                        <li><a href="https://t.me/sewasew" target="_blank" rel="noopener">Telegram</a></li>
-                        <li><a href="tel:+251911234567">+251 911 234 567</a></li>
-                        <li><a href="mailto:info@sewasewacademy.com">info@sewasewacademy.com</a></li>
-                    </ul>
+                <div class="footer-links">
+                    <div class="footer-col">
+                        <h5>Quick Links</h5>
+                        <a href="../index.html">Home</a>
+                        <a href="about.html">About</a>
+                        <a href="programs.html">Programs</a>
+                        <a href="why-sewasew.html">Why SewaSew</a>
+                    </div>
+                    <div class="footer-col">
+                        <h5>Programs</h5>
+                        <a href="programs.html">General English</a>
+                        <a href="programs.html">Business English</a>
+                        <a href="programs.html">Exam Preparation</a>
+                        <a href="programs.html">Custom Training</a>
+                    </div>
+                    <div class="footer-col">
+                        <h5>Contact</h5>
+                        <a href="https://t.me/sewasewacademy" target="_blank" rel="noopener">Telegram</a>
+                        <a href="https://wa.me/251923052061" target="_blank" rel="noopener">WhatsApp</a>
+                        <a href="tel:+251923052061">+251 923 052 061</a>
+                        <a href="mailto:sewasewacademy@gmail.com">Email Us</a>
+                    </div>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 SewaSew Academy. All rights reserved.</p>
+                <span>&copy; 2024 SewaSew Academy. All rights reserved.</span>
+                <span>Addis Ababa, Ethiopia</span>
             </div>
         </div>
     </footer>
 
     <script src="../js/main.js"></script>
-    <script>
-        // Contact form handling
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your message! We will get back to you within 24 hours.');
-            this.reset();
-        });
-    </script>
 </body>
 </html>
