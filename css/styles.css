@@ -396,40 +396,6 @@ header .logo-image {
    MODERN MOBILE MENU STYLES
    ===================== */
 
-/* Hamburger Menu Button */
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-    background: transparent;
-    border: none;
-    padding: 10px;
-    z-index: 999;
-}
-
-.hamburger span {
-    width: 28px;
-    height: 3px;
-    background: var(--dark);
-    margin: 5px 0;
-    transition: all 0.3s ease;
-    border-radius: 2px;
-}
-
-/* Hamburger Active State */
-.hamburger.open span:nth-child(1) {
-    transform: rotate(45deg) translateY(15px);
-}
-
-.hamburger.open span:nth-child(2) {
-    opacity: 0;
-    transform: translateX(-10px);
-}
-
-.hamburger.open span:nth-child(3) {
-    transform: rotate(-45deg) translateY(-15px);
-}
-
 /* Mobile Navigation Panel */
 .mobile-menu {
     position: fixed;
