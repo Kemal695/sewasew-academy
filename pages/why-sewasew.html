@@ -7,6 +7,8 @@
     <title>Why SewaSew | SewaSew Academy</title>
     <link rel="icon" type="image/svg+xml" href="../favicon.svg">
     <link rel="stylesheet" href="../css/styles.css?v=2">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+    <script src="../aset/telegram-anim-data.js"></script>
 </head>
 <body>
     <!-- Noise Texture -->
@@ -359,7 +361,30 @@
             </div>
         </div>
     </footer>
+    <div class="floating-button-container">
+        <button class="floating-telegram-btn" id="floatingBtn" title="Contact us on Telegram">
+            <div class="lottie-animation" id="telegram-anim-container"></div>
+        </button>
+        <div class="floating-labels">
+            <div class="floating-label"><a href="https://t.me/sewasewacademy" target="_blank">💬 Chat on Telegram</a></div>
+        </div>
+    </div>
 
     <script src="../js/main.js"></script>
+    <script>
+        var telegramAnim = lottie.loadAnimation({
+            container: document.getElementById('telegram-anim-container'),
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            animationData: telegramAnimData
+        });
+        var floatingBtn = document.getElementById('floatingBtn');
+        floatingBtn.addEventListener('click', function() { window.open('https://t.me/sewasewacademy', '_blank'); });
+        floatingBtn.addEventListener('mouseenter', function() { telegramAnim.setSpeed(1.5); });
+        floatingBtn.addEventListener('mouseleave', function() { telegramAnim.setSpeed(1); });
+        floatingBtn.addEventListener('touchstart', function() { this.style.transform = 'scale(0.95)'; });
+        floatingBtn.addEventListener('touchend', function() { this.style.transform = 'scale(1)'; });
+    </script>
 </body>
 </html>

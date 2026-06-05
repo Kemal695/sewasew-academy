@@ -7,8 +7,10 @@
     <title>SewaSew Academy | Professional English Communication Training</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="stylesheet" href="css/styles.css?v=2">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
+    <script src="aset/telegram-anim-data.js"></script>
 </head>
-<body>
+<body class="homepage">
     <!-- Noise Texture -->
     <div class="noise"></div>
 
@@ -98,6 +100,7 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-bg">
+            <div class="hero-bg-img"></div>
             <div class="orb orb-1"></div>
             <div class="orb orb-2"></div>
             <div class="orb orb-3"></div>
@@ -108,10 +111,10 @@
                 <span class="badge-dot"></span>
                Premium English Institution — Addis Ababa
             </div>
-            <h1 class="hero-title" data-animate>
-                <span class="line">Structured English</span>
-                <span class="line">for Real</span>
-                <span class="line gradient-text">Communication</span>
+            <h1 class="hero-title">
+                <span class="line" data-animate>Structured English</span>
+                <span class="line" data-animate>for Real</span>
+                <span class="line gradient-text" data-animate>Communication</span>
             </h1>
             <p class="hero-sub" data-animate>
                 A premium English institution in Addis Ababa that develops confident communicators through structured, CEFR-aligned, outcome-driven learning.
@@ -187,24 +190,30 @@
 a clear and progressive learning pathway.</p>
             </div>
             <div class="programs-grid" data-animate>
-                <div class="prog-card prog-card-featured">
-                    <div class="prog-hover-bar"></div>
-                    <span class="prog-num">01</span>
-                    <div class="prog-icon">📚</div>
-                    <h3>Pre-Beginner General English (A0)</h3>
-                    <p>Build foundational English skills through guided communication, reading, writing, vocabulary, and grammar development.</p>
-                    <div class="prog-tags">
-                        <span>Pre-Beginner</span>
+                <div class="prog-card">
+                    <div class="prog-card-bg"></div>
+                    <div class="prog-card-glow"></div>
+                    <span class="prog-card-num">01</span>
+                    <div class="prog-card-top">
+                        <div class="prog-icon-wrap">
+                            <img src="aset/general english.gif" alt="General English" class="prog-icon-img">
+                        </div>
+                        <h3>Pre-Beginner General English <span class="prog-level-tag">A0</span></h3>
+                        <p>Build foundational English skills through guided communication, reading, writing, vocabulary, and grammar development.</p>
+                        <span class="prog-level">Pre-Beginner</span>
                     </div>
                 </div>
                 <div class="prog-card">
-                    <div class="prog-hover-bar"></div>
-                    <span class="prog-num">02</span>
-                    <div class="prog-icon">🗣️</div>
-                    <h3>Spoken English Pathway (A1–C2)</h3>
-                    <p>Develop practical communication skills through Beginner, Intermediate, and Advanced levels focused on fluency, confidence, and real-world communication.</p>
-                    <div class="prog-tags">
-                        <span>Beginner-Intermediate</span>
+                    <div class="prog-card-bg"></div>
+                    <div class="prog-card-glow"></div>
+                    <span class="prog-card-num">02</span>
+                    <div class="prog-card-top">
+                        <div class="prog-icon-wrap">
+                            <img src="aset/speaker.gif" alt="Spoken English" class="prog-icon-img">
+                        </div>
+                        <h3>Spoken English Pathway <span class="prog-level-tag">A1–C2</span></h3>
+                        <p>Develop practical communication skills through Beginner, Intermediate, and Advanced levels focused on fluency, confidence, and real-world communication.</p>
+                        <span class="prog-level">Beginner–Intermediate</span>
                     </div>
                 </div>
             </div>
@@ -382,7 +391,30 @@ a clear and progressive learning pathway.</p>
             </div>
         </div>
     </footer>
+    <div class="floating-button-container">
+        <button class="floating-telegram-btn" id="floatingBtn" title="Contact us on Telegram">
+            <div class="lottie-animation" id="telegram-anim-container"></div>
+        </button>
+        <div class="floating-labels">
+            <div class="floating-label"><a href="https://t.me/sewasewacademy" target="_blank">💬 Chat on Telegram</a></div>
+        </div>
+    </div>
 
     <script src="js/main.js"></script>
+    <script>
+        var telegramAnim = lottie.loadAnimation({
+            container: document.getElementById('telegram-anim-container'),
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            animationData: telegramAnimData
+        });
+        var floatingBtn = document.getElementById('floatingBtn');
+        floatingBtn.addEventListener('click', function() { window.open('https://t.me/sewasewacademy', '_blank'); });
+        floatingBtn.addEventListener('mouseenter', function() { telegramAnim.setSpeed(1.5); });
+        floatingBtn.addEventListener('mouseleave', function() { telegramAnim.setSpeed(1); });
+        floatingBtn.addEventListener('touchstart', function() { this.style.transform = 'scale(0.95)'; });
+        floatingBtn.addEventListener('touchend', function() { this.style.transform = 'scale(1)'; });
+    </script>
 </body>
 </html>
