@@ -5,62 +5,41 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     // Custom Cursor
-    const cursor = document.querySelector('.cursor');
-    const cursorFollower = document.querySelector('.cursor-follower');
+    var cursor = document.querySelector('.cursor');
+    var cursorFollower = document.querySelector('.cursor-follower');
 
-    // Detect touch device
-    const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
-
-    if (cursor && cursorFollower && !isTouchDevice && window.innerWidth > 768) {
-        let mouseX = 0, mouseY = 0;
-        let followerX = 0, followerY = 0;
+    if (cursor && cursorFollower && window.innerWidth > 768) {
+        var mouseX = 0, mouseY = 0;
+        var followerX = 0, followerY = 0;
 
         document.addEventListener('mousemove', function(e) {
             mouseX = e.clientX;
             mouseY = e.clientY;
-
-            // Immediate update for main cursor
             cursor.style.left = mouseX + 'px';
             cursor.style.top = mouseY + 'px';
         });
 
-        // Smooth follower animation
         function animateCursor() {
             followerX += (mouseX - followerX) * 0.15;
             followerY += (mouseY - followerY) * 0.15;
-
             cursorFollower.style.left = followerX + 'px';
             cursorFollower.style.top = followerY + 'px';
-
             requestAnimationFrame(animateCursor);
         }
         animateCursor();
 
-        // Hover effects
-        const hoverElements = document.querySelectorAll('a, button, .prog-card, .pillar, .learner-card, .format-item, .social-icon, input, textarea');
-        hoverElements.forEach(el => {
-            el.addEventListener('mouseenter', () => {
+        var hoverEls = document.querySelectorAll('a, button, .prog-card, .pillar, .learner-card, .format-item, .social-icon, input, textarea');
+        hoverEls.forEach(function(el) {
+            el.addEventListener('mouseenter', function() {
                 cursor.classList.add('hover');
                 cursorFollower.classList.add('hover');
             });
-            el.addEventListener('mouseleave', () => {
+            el.addEventListener('mouseleave', function() {
                 cursor.classList.remove('hover');
                 cursorFollower.classList.remove('hover');
             });
         });
-
-        // Hide cursor when leaving window
-        document.addEventListener('mouseleave', () => {
-            cursor.style.opacity = '0';
-            cursorFollower.style.opacity = '0';
-        });
-
-        document.addEventListener('mouseenter', () => {
-            cursor.style.opacity = '1';
-            cursorFollower.style.opacity = '1';
-        });
     } else if (cursor && cursorFollower) {
-        // Completely hide on mobile/touch devices
         cursor.style.display = 'none';
         cursorFollower.style.display = 'none';
     }
@@ -249,10 +228,9 @@ document.addEventListener('DOMContentLoaded', function() {
     let resizeTimer;
     window.addEventListener('resize', function() {
         clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(() => {
-            // Show/hide custom cursor based on screen size and touch capability
+        resizeTimer = setTimeout(function() {
             if (cursor && cursorFollower) {
-                if (!isTouchDevice && window.innerWidth > 768) {
+                if (window.innerWidth > 768) {
                     cursor.style.display = '';
                     cursorFollower.style.display = '';
                 } else {
@@ -272,6 +250,57 @@ document.addEventListener('DOMContentLoaded', function() {
             document.body.classList.remove('mobile-menu-open');
         }
     });
+
+    // Typing Effect for Section Titles (one at a time on scroll)
+    (function initSectionTyping() {
+        var titles = document.querySelectorAll('.section-title');
+        if (!titles.length) return;
+
+        titles.forEach(function(title) {
+            var text = title.textContent.trim();
+            if (!text) return;
+            title.textContent = '';
+            title.classList.add('typing');
+            title.dataset.typeText = text;
+            title.dataset.typed = 'false';
+        });
+
+        var cursor = document.createElement('span');
+        cursor.className = 'typing-cursor';
+
+        function startTyping(el) {
+            var text = el.dataset.typeText;
+            if (!text || el.dataset.typed === 'true') return;
+            el.dataset.typed = 'true';
+
+            var charIdx = 0;
+            function type() {
+                if (charIdx < text.length) {
+                    el.textContent = text.substring(0, charIdx + 1);
+                    el.appendChild(cursor);
+                    charIdx++;
+                    var delay = text[charIdx - 1] === ' ' ? 80 : 40;
+                    setTimeout(type, delay);
+                } else {
+                    if (cursor.parentNode) cursor.remove();
+                }
+            }
+            setTimeout(type, 300);
+        }
+
+        var typeObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    startTyping(entry.target);
+                    typeObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.3 });
+
+        titles.forEach(function(title) {
+            typeObserver.observe(title);
+        });
+    })();
 
     // Console message for developers
     console.log('🎨 SewaSew Academy - Modern Dark Theme Loaded');
