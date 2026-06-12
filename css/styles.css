@@ -211,6 +211,7 @@ button { cursor: pointer; font-family: inherit; }
     margin-bottom: 1.25rem;
     word-wrap: break-word;
     overflow-wrap: break-word;
+    max-width: 100%;
 }
 .section-sub {
     color: var(--text-muted);
@@ -1125,7 +1126,7 @@ body.homepage .hero-stats[data-animate] { transition-delay: 1.3s; }
 
 .about-text .section-title { text-align: left; }
 .about-text .section-eyebrow { justify-content: flex-start; }
-.about-text { width: 100%; }
+.about-text { width: 100%; overflow-wrap: break-word; word-break: break-word; }
 
 .about-pillars {
     display: flex;
@@ -1152,7 +1153,7 @@ body.homepage .hero-stats[data-animate] { transition-delay: 1.3s; }
 .programs-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
+    gap: 3rem;
     width: 100%;
 }
 .prog-card {
@@ -1164,7 +1165,7 @@ body.homepage .hero-stats[data-animate] { transition-delay: 1.3s; }
     display: flex;
     flex-direction: column;
     background: var(--white);
-    border: 1px solid var(--border);
+    border: 1px solid rgba(0,0,0,0.2);
     box-shadow: 0 4px 20px rgba(0,0,0,0.04);
     transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
@@ -1589,8 +1590,9 @@ section[style*="background:var(--dark-2)"] .pillar-list li::before { color: var(
     text-align: center;
     transition: background 0.3s;
 }
-.learner-card:hover { background: var(--light); }
+
 .learner-icon { font-size: 2rem; margin-bottom: 1rem; }
+.learner-icon-img { width: 7rem; height: 7rem; object-fit: contain; display: block; margin: 0 auto; }
 .learner-card h4 {
     font-family: var(--font-display);
     font-size: 1rem;
@@ -1985,6 +1987,7 @@ section[style*="background:var(--dark-2)"] .pillar-list li::before { color: var(
 /* Prevent layout shift during typing */
 .section-title.typing {
     min-height: 1.2em;
+    word-break: break-word;
 }
 
 /* ============================================================
@@ -2123,12 +2126,12 @@ section[style*="background:var(--dark-2)"] .pillar p {
 
 section[style*="background: var(--dark-2)"] .learner-card h4,
 section[style*="background:var(--dark-2)"] .learner-card h4 {
-    color: var(--text-light) !important;
+    color: var(--dark) !important;
 }
 
 section[style*="background: var(--dark-2)"] .learner-card p,
 section[style*="background:var(--dark-2)"] .learner-card p {
-    color: var(--text-light-muted) !important;
+    color: var(--text-muted) !important;
 }
 
 section[style*="background: var(--dark-2)"] .pillar,
@@ -2139,7 +2142,7 @@ section[style*="background:var(--dark-2)"] .pillar {
 
 section[style*="background: var(--dark-2)"] .learner-card,
 section[style*="background:var(--dark-2)"] .learner-card {
-    background: rgba(255,255,255,0.05);
+    background: var(--white);
 }
 
 section[style*="background: var(--dark-2)"] .pillar:hover,
@@ -2148,10 +2151,6 @@ section[style*="background:var(--dark-2)"] .pillar:hover {
     border-color: rgba(0,180,180,0.3);
 }
 
-section[style*="background: var(--dark-2)"] .learner-card:hover,
-section[style*="background:var(--dark-2)"] .learner-card:hover {
-    background: rgba(255,255,255,0.08);
-}
 .footer-inner { max-width: 1280px; margin: 0 auto; padding: 0 48px; width: 100%; }
 .footer-top {
     display: grid;
@@ -2339,14 +2338,14 @@ section[style*="background:var(--dark-2)"] .learner-card:hover {
     /* Sections */
     .section { padding: 60px 0; }
     .section-header { margin-bottom: 40px; }
-    .section-title { font-size: clamp(1.5rem, 5vw, 2.2rem); }
+    .section-title { font-size: clamp(1.2rem, 4.5vw, 1.8rem); word-break: break-word; }
     .section-sub { font-size: 0.95rem; }
 
     /* Programs */
     .programs-grid { grid-template-columns: 1fr; gap: 1rem; }
     .prog-card { padding: 2rem 1.5rem; }
     .prog-card-num { top: 1.25rem; right: 1.25rem; }
-    .prog-icon-wrap { width: 48px; height: 48px; }
+    .prog-icon-wrap { width: 100px; height: 100px; }
     .prog-icon { font-size: 1.3rem; }
     .prog-card-footer { padding: 1rem 1.5rem; }
     .learners-grid { grid-template-columns: 1fr; }
@@ -2359,6 +2358,7 @@ section[style*="background:var(--dark-2)"] .learner-card:hover {
     /* About */
     .about-grid { gap: 32px; }
     .about-visual { height: 250px; }
+    .about-pillars { flex-wrap: wrap; }
     .a-card-front { width: 220px; height: 160px; top: 60px; left: 140px; }
     .a-card-mid { width: 200px; height: 120px; top: 100px; left: 60px; }
     .a-card-back { width: 180px; height: 110px; top: 30px; left: 10px; }
@@ -2366,6 +2366,7 @@ section[style*="background:var(--dark-2)"] .learner-card:hover {
     /* Why Section */
     .why-layout { gap: 40px; }
     .big-statement { font-size: clamp(1.3rem, 4vw, 1.8rem); padding-left: 1rem; }
+    .big-statement.pull-quote { padding: 1.25rem 1.25rem 1.25rem 2.5rem; font-size: clamp(1.1rem, 2.8vw, 1.5rem); }
     .pillar { padding: 1.5rem; }
 
     /* CTA Banner */
@@ -2455,7 +2456,7 @@ section[style*="background:var(--dark-2)"] .learner-card:hover {
     /* Sections */
     .section { padding: 50px 0; }
     .section-header { margin-bottom: 32px; }
-    .section-title { font-size: clamp(1.3rem, 6vw, 1.8rem); }
+    .section-title { font-size: clamp(0.95rem, 4.5vw, 1.4rem); word-break: break-word; }
     .section-sub { font-size: 0.9rem; }
 
     /* Cards */
@@ -2467,6 +2468,7 @@ section[style*="background:var(--dark-2)"] .learner-card:hover {
     .prog-level { font-size: 0.65rem; padding: 3px 10px; }
     .prog-card-footer { padding: 0.875rem 1.25rem; }
     .learner-card { padding: 1.5rem; }
+    .big-statement.pull-quote { padding: 1rem 1rem 1rem 2rem; font-size: clamp(0.95rem, 3.5vw, 1.2rem); }
     .pillar { padding: 1.25rem; }
 
     /* About Visual */
