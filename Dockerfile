@@ -6,6 +6,9 @@ COPY index.html /usr/share/nginx/html/
 COPY css/ /usr/share/nginx/html/css/
 COPY js/ /usr/share/nginx/html/js/
 COPY images/ /usr/share/nginx/html/images/
+COPY aset/ /usr/share/nginx/html/aset/
+COPY fonts/ /usr/share/nginx/html/fonts/
+COPY Montserrat/ /usr/share/nginx/html/Montserrat/
 COPY pages/ /usr/share/nginx/html/pages/
 COPY favicon.svg /usr/share/nginx/html/
 
