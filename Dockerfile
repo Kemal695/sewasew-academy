@@ -11,6 +11,7 @@ COPY fonts/ /usr/share/nginx/html/fonts/
 COPY Montserrat/ /usr/share/nginx/html/Montserrat/
 COPY pages/ /usr/share/nginx/html/pages/
 COPY favicon.svg /usr/share/nginx/html/
+COPY favicon.png /usr/share/nginx/html/
 
 # Expose port 80
 EXPOSE 80
