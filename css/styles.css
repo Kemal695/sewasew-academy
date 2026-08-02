@@ -753,16 +753,16 @@ body.mobile-menu-open {
     bottom: 30%;
     background: url('../aset/hero.png') center / cover no-repeat;
     z-index: 0;
-    -webkit-mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
-    mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
 }
 .hero-bg-img::after {
     content: '';
     position: absolute;
     inset: 0;
     background: rgba(0,0,0,0.75);
-    -webkit-mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
-    mask-image: linear-gradient(to bottom, black 75%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
 }
 
 .orb {
@@ -1434,40 +1434,12 @@ body.homepage .hero-stats[data-animate],
     font-weight: 600;
     font-style: italic;
     line-height: 1.6;
-    padding: 1.75rem 2rem 1.75rem 3.5rem;
+    padding: 2rem 2rem 2rem 2rem;
     border-left: 3px solid var(--cyan);
     background: linear-gradient(135deg, rgba(0,180,180,0.04) 0%, rgba(125,211,192,0.02) 100%);
     border-radius: 0 var(--radius) var(--radius) 0;
     position: relative;
     color: var(--dark-2);
-}
-.big-statement.pull-quote::before {
-    content: '"';
-    position: absolute;
-    top: 0.25rem;
-    left: 0.75rem;
-    font-size: 4rem;
-    font-weight: 800;
-    font-style: normal;
-    color: var(--cyan);
-    line-height: 1;
-    opacity: 0.5;
-    font-family: Georgia, 'Times New Roman', serif;
-    pointer-events: none;
-}
-.big-statement.pull-quote::after {
-    content: '"';
-    position: absolute;
-    bottom: -0.5rem;
-    right: 1rem;
-    font-size: 4rem;
-    font-weight: 800;
-    font-style: normal;
-    color: var(--cyan);
-    line-height: 1;
-    opacity: 0.5;
-    font-family: Georgia, 'Times New Roman', serif;
-    pointer-events: none;
 }
 .problem-cards { display: flex; flex-direction: column; gap: 0.75rem; margin-top: 2rem; width: 100%; }
 .problem-card {
@@ -1889,6 +1861,7 @@ section[style*="background:var(--dark-2)"] .pillar-list li::before { color: var(
     box-shadow: 0 4px 24px rgba(0,0,0,0.05);
     position: relative;
     overflow: hidden;
+    text-align: center;
 }
 .help-single-card::before {
     content: '';
@@ -1912,6 +1885,7 @@ section[style*="background:var(--dark-2)"] .pillar-list li::before { color: var(
     flex-direction: column;
     gap: 1rem;
     margin-bottom: 1.75rem;
+    align-items: center;
 }
 .help-single-item {
     display: flex;
@@ -1920,6 +1894,9 @@ section[style*="background:var(--dark-2)"] .pillar-list li::before { color: var(
     font-size: 0.92rem;
     color: var(--dark);
     line-height: 1.4;
+    text-align: left;
+    width: 100%;
+    max-width: 300px;
 }
 .help-check {
     width: 24px;
@@ -2442,8 +2419,6 @@ section[style*="background:var(--dark-2)"] .pillar:hover {
     .why-layout { gap: 40px; }
     .big-statement { font-size: clamp(1.3rem, 4vw, 1.8rem); padding-left: 1rem; }
     .big-statement.pull-quote { padding: 1.25rem 1.25rem 1.25rem 2.5rem; font-size: clamp(1.1rem, 2.8vw, 1.5rem); }
-    .big-statement.pull-quote::before { top: 0.1rem; left: 0.5rem; font-size: 3rem; }
-    .big-statement.pull-quote::after { bottom: -0.3rem; right: 0.75rem; font-size: 3rem; }
     .pillar { padding: 1.5rem; }
 
     /* CTA Banner */
@@ -2546,8 +2521,6 @@ section[style*="background:var(--dark-2)"] .pillar:hover {
     .prog-card-footer { padding: 0.875rem 1.25rem; }
     .learner-card { padding: 1.5rem; }
     .big-statement.pull-quote { padding: 1rem 1rem 1rem 2rem; font-size: clamp(0.95rem, 3.5vw, 1.2rem); }
-    .big-statement.pull-quote::before { top: 0.05rem; left: 0.4rem; font-size: 2.5rem; }
-    .big-statement.pull-quote::after { bottom: -0.2rem; right: 0.5rem; font-size: 2.5rem; }
     .pillar { padding: 1.25rem; }
 
     /* About Visual */
